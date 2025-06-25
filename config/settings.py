@@ -2,7 +2,6 @@ import os
 import logging
 from dotenv import load_dotenv
 
-
 class BotConfig:
     def __init__(self):
         load_dotenv()

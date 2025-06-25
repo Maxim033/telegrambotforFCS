@@ -10,8 +10,8 @@ class VSUService:
                 return "числитель"
             week_number = now.isocalendar()[1]
             return "числитель" if week_number % 2 == 1 else "знаменатель"
-        except Exception as e:
-            logging.error(f"Ошибка в get_week_type: {e}")
+        except Exception as error:
+            logging.error(f"Ошибка в get_week_type: {error}")
             return "не определен"
 
     @staticmethod

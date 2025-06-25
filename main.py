@@ -1,5 +1,6 @@
 from config.settings import BotConfig
 from bot.vsu_bot import VSUBot
+import logging
 
 if __name__ == "__main__":
     try:
@@ -8,7 +9,6 @@ if __name__ == "__main__":
             token=config.telegram_token,
             openai_key=config.openai_key
         )
-        bot.run()
-    except Exception as e:
-        import logging
-        logging.error(f"Фатальная ошибка: {e}")
+        bot.run()  # ✅ просто обычный вызов
+    except Exception as error:
+        logging.error(f"Фатальная ошибка: {error}")
